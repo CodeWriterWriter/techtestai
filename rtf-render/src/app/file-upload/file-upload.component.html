@@ -1,0 +1,19 @@
+<div class="form-group header">
+    <label for="file">Choose File</label>
+    <input type="file"
+           id="file"
+           accept=".json"
+           (change)="handleFileInput($event.target.files)">
+        <form [formGroup]="findForm" (ngSubmit)="replace(findForm.value)">
+            <input #findText type="text" placeholder="find" formControlName="text"/>
+            <button class="button" type="submit">Find text</button>
+            <input #replaceText type="text" placeholder="find" formControlName="replace"/>
+            <button class="button" type="submit">Replace</button>
+        </form>
+        
+        <button class="button" (click)="nextFindResult(findForm.value)">Next</button>
+        <button class="button" (click)="lastFindResult(findForm.value)">Previous</button>
+        {{debugText}}
+</div>
+<div class="buffer"></div>
+<div [innerHTML]=renderData class="content"></div>

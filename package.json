@@ -1,0 +1,14 @@
+{
+  "name": "genie.ai",
+  "version": "1.0.0",
+  "description": "Rich Text Rendering",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@angular/core": "^10.1.0"
+  }
+}
